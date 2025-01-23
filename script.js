@@ -42,3 +42,4 @@ function playRound (humanChoice, computerChoice){
         }
     }
 }
+console.log(playRound(getHumanChoice(), getComputerChoice()));
