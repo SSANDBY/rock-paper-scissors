@@ -53,13 +53,15 @@ let gameWinner = document.querySelector('#result');
 rockchoice.addEventListener('click', () => {
     let gameResult = playRound('rock', getComputerChoice());
     winResult.textContent = gameResult;
-
+    scoreResult.textContent = `Human: ${humanScore} Computer: ${computerScore}`;
 });
 paperchoice.addEventListener('click', () => {
     let gameResult = playRound('paper', getComputerChoice());
     winResult.textContent = gameResult;
+    scoreResult.textContent = `Human: ${humanScore} Computer: ${computerScore}`;
 });
 scissorschoice.addEventListener('click', () => {
     let gameResult = playRound('scissors', getComputerChoice());
     winResult.textContent = gameResult;
+    scoreResult.textContent = `Human: ${humanScore} Computer: ${computerScore}`;
 }); 
