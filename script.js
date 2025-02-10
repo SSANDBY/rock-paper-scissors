@@ -95,3 +95,17 @@ scissorschoice.addEventListener('click', () => {
         computerScore = 0;
     }
 }); 
+let styles = document.body.style;
+styles.textAlign = 'center';
+styles.padding = '20px';
+styles.backgroundColor = 'lightblue';
+styles.fontFamily = 'Arial';
+let buttonStyles = document.querySelectorAll('button');
+buttonStyles.forEach((button) => {
+    button.style.backgroundColor = 'white';
+    button.style.padding = '10px';
+    button.style.margin = '10px';
+    button.style.border = 'none';
+    button.style.borderRadius = '5px';
+    button.style.cursor = 'pointer';
+});
