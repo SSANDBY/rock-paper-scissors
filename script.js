@@ -42,19 +42,20 @@ function playRound (humanChoice, computerChoice){
         }
     }
 }
-function playGame (){
-    for (let i = 0; i < 5; i++){
-        let humanChoice = getHumanChoice();
-        let computerChoice = getComputerChoice();
-        console.log(playRound(humanChoice, computerChoice));
-    }
-    if (humanScore > computerScore){
-        console.log('You win the game!');
-    } else if (humanScore === computerScore){
-        console.log('It is a tie!');
-    }
-    else {
-        console.log('Computer wins the game!');
-    }
-}
-playGame();
+
+let rockchoice = document.querySelector('#rock');
+let paperchoice = document.querySelector('#paper');
+let scissorschoice = document.querySelector('#scissors');
+
+rockchoice.addEventListener('click', () => {
+    let gameResult = playRound('rock', getComputerChoice());
+    console.log(gameResult);
+});
+paperchoice.addEventListener('click', () => {
+    let gameResult = playRound('paper', getComputerChoice());
+    console.log(gameResult);
+});
+scissorschoice.addEventListener('click', () => {
+    let gameResult = playRound('scissors', getComputerChoice());
+    console.log(gameResult);
+}); 
