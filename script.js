@@ -48,20 +48,50 @@ let paperchoice = document.querySelector('#paper');
 let scissorschoice = document.querySelector('#scissors');
 let winResult = document.querySelector('#winResult');
 let scoreResult = document.querySelector('#scoreResult');
-let gameWinner = document.querySelector('#result');
+
 
 rockchoice.addEventListener('click', () => {
     let gameResult = playRound('rock', getComputerChoice());
     winResult.textContent = gameResult;
     scoreResult.textContent = `Human: ${humanScore} Computer: ${computerScore}`;
+    if (humanScore === 5){
+        winResult.textContent = 'Human wins the game!';
+        humanScore = 0;
+        computerScore = 0;
+    }
+    else if (computerScore === 5){
+        winResult.textContent = 'Computer wins the game!';
+        humanScore = 0;
+        computerScore = 0;
+    }
 });
 paperchoice.addEventListener('click', () => {
     let gameResult = playRound('paper', getComputerChoice());
     winResult.textContent = gameResult;
     scoreResult.textContent = `Human: ${humanScore} Computer: ${computerScore}`;
+    if (humanScore === 5){
+        winResult.textContent = 'Human wins the game!';
+        humanScore = 0;
+        computerScore = 0;
+    }
+    else if (computerScore === 5){
+        winResult.textContent = 'Computer wins the game!';
+        humanScore = 0;
+        computerScore = 0;
+    }
 });
 scissorschoice.addEventListener('click', () => {
     let gameResult = playRound('scissors', getComputerChoice());
     winResult.textContent = gameResult;
     scoreResult.textContent = `Human: ${humanScore} Computer: ${computerScore}`;
+    if (humanScore === 5){
+        winResult.textContent = 'Human wins the game!';
+        humanScore = 0;
+        computerScore = 0;
+    }
+    else if (computerScore === 5){
+        winResult.textContent = 'Computer wins the game!';
+        humanScore = 0;
+        computerScore = 0;
+    }
 }); 
