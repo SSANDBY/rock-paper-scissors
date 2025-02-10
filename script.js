@@ -46,16 +46,20 @@ function playRound (humanChoice, computerChoice){
 let rockchoice = document.querySelector('#rock');
 let paperchoice = document.querySelector('#paper');
 let scissorschoice = document.querySelector('#scissors');
+let winResult = document.querySelector('#winResult');
+let scoreResult = document.querySelector('#scoreResult');
+let gameWinner = document.querySelector('#result');
 
 rockchoice.addEventListener('click', () => {
     let gameResult = playRound('rock', getComputerChoice());
-    console.log(gameResult);
+    winResult.textContent = gameResult;
+
 });
 paperchoice.addEventListener('click', () => {
     let gameResult = playRound('paper', getComputerChoice());
-    console.log(gameResult);
+    winResult.textContent = gameResult;
 });
 scissorschoice.addEventListener('click', () => {
     let gameResult = playRound('scissors', getComputerChoice());
-    console.log(gameResult);
+    winResult.textContent = gameResult;
 }); 
